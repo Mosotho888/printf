@@ -29,8 +29,8 @@ int run_printf(const char *format, va_list args, buffer_t *output)
 	int ret = 0;
 	char tmp;
 	unsigned char flags, len;
-	unsigned int (*f)(va_list, buffer_t *,unsigned char, int,
-			int, unsigned char);
+	unsigned int (*f)(va_list, buffer_t *,
+			unsigned char, int, int, unsigned char);
 
 	for (count = 0; *(format + count); count++)
 	{
@@ -66,6 +66,8 @@ int run_printf(const char *format, va_list args, buffer_t *output)
 /**
  *   _printf - Outputs a formatted string.
  *   @format: Character string to print - may contain directives.
+ *   Description - printing Characters that may contain directories
+ *
  *   Return: The number of characters printed.
  */
 int _printf(const char *format, ...)
